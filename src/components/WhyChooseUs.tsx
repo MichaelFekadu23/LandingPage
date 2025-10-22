@@ -1,29 +1,29 @@
 import React from "react";
 
 export default function WhyChooseUs() {
-  const photoSrc = "/src/assets/car-type.svg"; // Replace with your actual image path
+  const photoSrc = "/assets/car-type.svg"; // Replace with your actual image path
 
   const features = [
     {
-      iconSrc: "/src/assets/tailored-vehicle.svg",
+      iconSrc: "/assets/tailored-vehicle.svg",
       title: "Tailored Vehicle Choices",
       description:
         "Choose from Classic, Comfort, Luxury or Minivan rides to suit any occasion or budget.",
     },
     {
-      iconSrc: "/src/assets/three-ways.svg",
+      iconSrc: "/assets/three-ways.svg",
       title: "3 ways to ride, one powerful platform",
       description:
         "Select from Automatic Bidding for savings, Flex Fare for negotiation and control, or Instant Match for the fastest pick-up. Moto gives you the power to ride on your terms.",
     },
     {
-      iconSrc: "/src/assets/bolt.svg",
+      iconSrc: "/assets/bolt.svg",
       title: "Fast and convenient booking",
       description:
         "Moto leads the industry with fast booking options on WhatsApp, call-in order, and our seamless app, delivering unparalleled convenience.",
     },
     {
-      iconSrc: "/src/assets/headset.svg",
+      iconSrc: "/assets/headset.svg",
       title: "24/7 support",
       description:
         "Support that never sleeps—here whenever, wherever you need us.",

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'FreightSansPro';
-  src: url('/src/assets/FreightSansProSemibold-Regular.woff2') format('woff2'),
-       url('/src/assets/FreightSansProSemibold-Regular.woff') format('woff');
+  src: url('/assets/FreightSansProSemibold-Regular.woff2') format('woff2'),
+       url('/assets/FreightSansProSemibold-Regular.woff') format('woff');
   font-weight: 600; /* semibold */
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/src/assets/Poppins-Medium.ttf') format('truetype');
+  src: url('/assets/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 /* Poppins 600 (SemiBold) */
 @font-face {
   font-family: 'Poppins';
-  src: url('/src/assets/Poppins-SemiBold.ttf') format('truetype');
+  src: url('/assets/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -26,12 +26,12 @@
 
 @font-face {
   font-family: 'NexaTrial';
-  src: url('/src/assets/Nexa-Bold.ttf') format('truetype');
+  src: url('/assets/Nexa-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family:  'Inter';
-  src: url('/src/assets/Inter-SemiBold.woff') format('woff');
+  src: url('/assets/Inter-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -40,13 +40,13 @@
 /* add inter regular font */
 @font-face {
   font-family: 'Inter';
-  src: url('/src/assets/Inter-Regular.woff') format('woff');
+  src: url('/assets/Inter-Regular.woff') format('woff');
 }
 
 /* add inter font for 400 weight */
 @font-face {
   font-family: 'NormalInter';
-  src: url('/src/assets/Inter-Regular.woff') format('woff');
+  src: url('/assets/Inter-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -54,6 +54,6 @@
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/src/assets/Nexa-Bold.ttf') format('truetype');
+  src: url('/assets/Nexa-Bold.ttf') format('truetype');
 
 }

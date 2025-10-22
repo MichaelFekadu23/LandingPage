@@ -33,7 +33,7 @@ export default function App() {
           </div>
 
           <HowItWorks />
-        <MotoStreetPickupSection phoneSvgSrc="/src/assets/phone-content.svg"/>
+          <MotoStreetPickupSection phoneSvgSrc="/assets/phone-content.svg"/>
         </div>
       </section>
         <HowMotoWorks />

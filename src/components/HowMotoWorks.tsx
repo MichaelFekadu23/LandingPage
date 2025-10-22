@@ -10,25 +10,25 @@ type Step = {
 
 const steps: Step[] = [
   {
-    imgSrc: "/src/assets/scan-qr-code.svg",
+    imgSrc: "/assets/scan-qr-code.svg",
     title: "Scan QR Code",
     description:
       "Use your phone’s camera to scan the QR code inside any Moto car.",
   },
   {
-    imgSrc: "/src/assets/quick-details.svg",
+    imgSrc: "/assets/quick-details.svg",
     title: "Quick Details",
     description:
       "Enter your name and phone number—no app needed. After your frst ride, your details are saved for even faster bookings.",
   },
   {
-    imgSrc: "/src/assets/start-ride.svg",
+    imgSrc: "/assets/start-ride.svg",
     title: "Start Your Ride",
     description:
       "Tell your driver your destination and swipe to begin. The driver gets your info instantly, and your trip is securely logged.",
   },
   {
-    imgSrc: "/src/assets/arrive.svg",
+    imgSrc: "/assets/arrive.svg",
     title: "Arrive",
     description:
       "Your ride is GPS-tracked. When you arrive, pay by cash, Telebirr, or card, and receive a digital receipt right to your phone.",

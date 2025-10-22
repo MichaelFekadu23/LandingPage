@@ -7,13 +7,13 @@ function ParallelogramTile({ src }: { src: string }) {
 }
 
 export default function CallToOrder() {
-  const phoneBadgeSrc = "/src/assets/phone-badge.svg";
+  const phoneBadgeSrc = "/assets/phone-badge.svg";
 
   const tiles = [
-    { src: "/src/assets/tiles/tile1.png", digit: "8" },
-    { src: "/src/assets/tiles/tile2.png", digit: "7" },
-    { src: "/src/assets/tiles/tile3.png", digit: "7" },
-    { src: "/src/assets/tiles/tile4.png", digit: "8" },
+    { src: "/assets/tiles/tile1.png", digit: "8" },
+    { src: "/assets/tiles/tile2.png", digit: "7" },
+    { src: "/assets/tiles/tile3.png", digit: "7" },
+    { src: "/assets/tiles/tile4.png", digit: "8" },
   ];
 
   return (

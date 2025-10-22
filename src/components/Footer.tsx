@@ -12,13 +12,13 @@ type FooterProps = {
 };
 
 export default function Footer({
-  logoSrc = "/src/assets/logo-footer.svg",
-  emailIconSrc = "/src/assets/icons/email.svg",
-  phoneIconSrc = "/src/assets/icons/phone.svg",
-  pinIconSrc = "/src/assets/icons/pin.svg",
-  fbIconSrc = "/src/assets/icons/fb.svg",
-  twIconSrc = "/src/assets/icons/tw.svg",
-  inIconSrc = "/src/assets/icons/in.svg",
+  logoSrc = "/assets/logo-footer.svg",
+  emailIconSrc = "/assets/icons/email.svg",
+  phoneIconSrc = "/assets/icons/phone.svg",
+  pinIconSrc = "/assets/icons/pin.svg",
+  fbIconSrc = "/assets/icons/fb.svg",
+  twIconSrc = "/assets/icons/tw.svg",
+  inIconSrc = "/assets/icons/in.svg",
 }: FooterProps) {
   return (
     <footer className="bg-white text-[rgba(26,26,26,0.9)]">

@@ -7,13 +7,13 @@ export default function Hero() {
       <div className="absolute inset-0">
         <video
           className="h-full w-full object-cover"
-          src="/src/assets/videos/Moto-video-1.mp4"
+          src="/assets/videos/Moto-video-1.mp4"
           autoPlay
           loop
           muted
           playsInline
           preload="none"
-          poster="/src/assets/hero.svg"
+          poster="/assets/hero.svg"
         />
         {/* gradient overlay for text readability */}
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.22),rgba(0,0,0,0.22))]" />

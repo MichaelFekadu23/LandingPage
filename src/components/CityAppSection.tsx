@@ -6,7 +6,7 @@ export default function CityAppSection() {
     <section className="relative bg-white flex justify-center items-center overflow-hidden pb-16">
       {/* background image */}
       <img
-        src="/src/assets/images/city-map.svg" // <-- replace with your SVG path
+        src="/assets/images/city-map.svg" // <-- replace with your SVG path
         alt="Moto city background"
         // className="w-full h-[680px] object-cover"
       />

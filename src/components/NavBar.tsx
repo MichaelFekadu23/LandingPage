@@ -5,7 +5,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 sm:h-20 w-full max-w-[1450px] items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <div className="flex shrink-0">
-          <img src="/src/assets/logo-new.svg" className="h-8 sm:h-9 w-auto" alt="Moto" />
+          <img src="/assets/logo-new.svg" className="h-8 sm:h-9 w-auto" alt="Moto" />
         </div>
 
         {/* Nav (desktop) */}
