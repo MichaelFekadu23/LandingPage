@@ -16,24 +16,24 @@ const defaultFeatures: Feature[] = [
     title: "Vehicle Safety Inspections",
     description:
       "All vehicles are inspected regularly to meet high safety standards, ensuring a safe and comfortable ride every time.",
-    iconSrc: "/src/assets/icons/vehicle-safety.svg",
+    iconSrc: "/assets/icons/vehicle-safety.svg",
   },
   {
     title: "Contactless Payment Options",
     description:
       "Opt for contactless payments to minimize physical interaction and make every transaction safe and seamless.",
-    iconSrc: "/src/assets/icons/payment.svg",
+    iconSrc: "/assets/icons/payment.svg",
   },
   {
     title: "Vetted and Trained Drivers",
     description:
       "All drivers undergo background checks to ensure they meet our safety standards, giving you peace of mind from Pickup to Drop-off.",
-    iconSrc: "/src/assets/icons/driver.svg",
+    iconSrc: "/assets/icons/driver.svg",
   },
 ];
 
 export default function SafetySection({
-  imageSrc = "/src/assets/images/safety.svg",
+  imageSrc = "/assets/images/safety.svg",
   features = defaultFeatures,
 }: SafetySectionProps) {
   return (

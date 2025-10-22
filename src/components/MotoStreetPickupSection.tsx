@@ -15,10 +15,10 @@ const Connector: React.FC = () => (
 
 
 const defaultSteps: Step[] = [
-  { labelTop: "Flag", labelBottom: "Down", iconSrc: "src/assets/flag-down.svg" },
-  { labelTop: "Scan QR", labelBottom: "Code", iconSrc: "src/assets/scan-qr.svg" },
-  { labelTop: "Swipe to", labelBottom: "Start Ride", iconSrc: "src/assets/swipe.svg" },
-  { labelTop: "Go", iconSrc: "src/assets/go.svg" },
+  { labelTop: "Flag", labelBottom: "Down", iconSrc: "/assets/flag-down.svg" },
+  { labelTop: "Scan QR", labelBottom: "Code", iconSrc: "/assets/scan-qr.svg" },
+  { labelTop: "Swipe to", labelBottom: "Start Ride", iconSrc: "/assets/swipe.svg" },
+  { labelTop: "Go", iconSrc: "/assets/go.svg" },
 ];
 
 export const MotoStreetPickupSection: React.FC<Props & { phoneSvgSrc?: string; phoneSvgNode?: React.ReactNode }> = ({ steps = defaultSteps, phoneSvgSrc, phoneSvgNode }) => {
