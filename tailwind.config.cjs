@@ -12,14 +12,22 @@ module.exports = {
         'emerald-dark': '#0C9F62',
       },
       fontFamily: {
-        sans: ['\"Plus Jakarta Sans\"', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        freight: ['"FreightSansPro"', 'sans-serif'],
+        nexa: ['NexaTrial', 'sans-serif'],
+        nexabold: ['Nexa', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        normalInter: ['NormalInter']
       },
+
       boxShadow: {
         glow: '0 20px 80px rgba(26, 212, 142, 0.3)',
         card: '0 30px 60px rgba(7, 10, 16, 0.45)',
       },
       backgroundImage: {
-        'hero-glow': 'radial-gradient(circle at top left, rgba(85, 242, 179, 0.25), transparent 55%), radial-gradient(circle at top right, rgba(26, 212, 142, 0.25), transparent 55%)',
+        'hero-glow':
+          'radial-gradient(circle at top left, rgba(85, 242, 179, 0.25), transparent 55%), radial-gradient(circle at top right, rgba(26, 212, 142, 0.25), transparent 55%)',
       },
     },
   },
