@@ -25,7 +25,7 @@ export default function App() {
         <div className="mx-auto w-full max-w-[1400px] px-5 mt-10">
           <div className="flex justify-center">
             <button
-              className="rounded-[40px] text-[rgba(26,26,26,0.90)] font-nexa text-[20px] px-9 py-4 font-bold"
+              className="rounded-[40px] text-[rgba(26,26,26,0.90)] font-nexa text-[16px] md:text-[18px] xl:text-[20px] px-6 md:px-9 py-3 md:py-4 font-bold"
               style={{ border: "1px solid rgba(0, 0, 0, 0.80)" }}
             >
               HOW MOTO WORKS

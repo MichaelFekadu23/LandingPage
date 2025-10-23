@@ -46,9 +46,10 @@ const cards: Card[] = [
 export default function DriverValueThirty() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8">
+      <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 md:py-16 lg:px-8">
         {/* Heading */}
-        <h2 className="mx-auto max-w-4xl font-nexabold text-center text-[28px] leading-tight text-[rgba(26,26,26,0.9)] sm:text-[36px] md:text-[48px]">
+        <h2 className="mx-auto max-w-4xl font-nexabold text-center leading-tight text-[rgba(26,26,26,0.9)]
+                       text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">
           Here’s what driving with{" "}
           <span className="text-[rgba(1,199,5,1)]">Moto</span> puts in
           <br className="hidden sm:block" />
@@ -58,71 +59,106 @@ export default function DriverValueThirty() {
 
         {/* Timeline */}
         <div className="relative mx-auto mt-8 w-full max-w-8xl">
-          {/* Labels */}
-          <div className="mb-3 flex justify-between text-[16px] text-[rgba(26,26,26,0.9)] font-normalInter">
-            <span className="rounded-full border border-[rgba(187,187,187,1)] px-3 py-1" style={{
-              background: 'linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)'
-            }}>
+          {/* Labels aligned to the 3 markers via grid */}
+          <div className="mb-3 grid grid-cols-3 items-center text-[rgba(26,26,26,0.9)]">
+            <span
+              className="justify-self-start rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+                         text-[12px] sm:text-[14px] md:text-[16px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+              }}
+            >
               Today
             </span>
-            <span className="rounded-full border border-[rgba(187,187,187,1)] px-3 ml-3 py-1" style={{
-              background: 'linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)'
-            }}>
+            <span
+              className="justify-self-center rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+                         text-[12px] sm:text-[14px] md:text-[16px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+              }}
+            >
               15 Days
             </span>
-            <span className="rounded-full border border-[rgba(187,187,187,1)] -mr-2 px-3 py-1" style={{
-              background: 'linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)'
-            }}>
+            <span
+              className="justify-self-end rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+                         text-[12px] sm:text-[14px] md:text-[16px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+              }}
+            >
               30 Days
             </span>
           </div>
 
           {/* Rail */}
-          <div className="relative h-[14px] w-[97%] mx-auto mt-6">
+          <div className="relative mx-auto mt-4 h-[14px] w-full max-w-[97%]">
             {/* line */}
             <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 rounded-full border border-[#01C705]/60" />
             {/* markers */}
-            <div className="absolute left-0 top-1/2 h-[25px] w-[25px] -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]" style={{
-              background: 'linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)'
-
-            }}/>
-            <div className="absolute left-1/2 top-1/2 h-[25px] w-[25px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]" style={{
-              background: 'linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)'
-
-            }}/>
-            <div className="absolute right-0 top-1/2 h-[25px] w-[25px] -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)] shadow" style={{
-              background: 'linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)'
-
-            }}/>
+            <div
+              className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]
+                         h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+              }}
+            />
+            <div
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]
+                         h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+              }}
+            />
+            <div
+              className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)] shadow
+                         h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+              }}
+            />
           </div>
         </div>
 
         {/* Cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:gap-6 md:mt-10 md:grid-cols-3">
           {cards.map((c, i) => (
             <article
               key={i}
-              className="max-w-[100%] max-h-[296px] w-full h-full rounded-2xl border border-[#01C705]/40 bg-gradient-to-tr from-[#01C705]/5 to-transparent p-6 shadow-[0_2px_8px_rgba(0,0,0,0.03)]"
+              className="w-full rounded-2xl border border-[#01C705]/40 bg-gradient-to-tr from-[#01C705]/5 to-transparent
+                         p-5 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.03)]"
               style={{
-                boxSizing: 'border-box',
-                background: 'linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 27.52%, rgba(191, 245, 192, 0.4) 133.14%)',
+                boxSizing: "border-box",
+                background:
+                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 27.52%, rgba(191, 245, 192, 0.4) 133.14%)",
               }}
             >
-              <h3 className="text-[20px] font-nexabold text-[rgba(26,26,26,0.9)]">
+              <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
+                             text-[18px] sm:text-[20px] md:text-[20px] lg:text-[20px]">
                 {c.title}
               </h3>
-              <ul className="mt-5 space-y-4">
+
+              <ul className="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
                 {c.points.map((p, j) => (
-                  <li key={j} className="flex gap-3 font-nexa text-[16px] leading-relaxed text-[rgba(26,26,26,0.65)]">
-                    {/* check icon placeholder (swap with your SVG) */}
+                  <li
+                    key={j}
+                    className="flex gap-3 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
+                               text-[14px] sm:text-[15px] md:text-[16px]"
+                  >
                     <svg
                       viewBox="0 0 24 24"
-                      className="mt-1 h-5 w-5 shrink-0"
+                      className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0"
                       fill="none"
                       stroke="#01C705"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
+                      aria-hidden="true"
                     >
                       <path d="M20 6 9 17l-5-5" />
                     </svg>
@@ -135,10 +171,14 @@ export default function DriverValueThirty() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 md:mt-10 flex justify-center">
           <a
             href="#"
-            className="inline-flex items-center justify-center rounded-full bg-[rgba(1,199,5,1)] px-8 lg:px-16 2xl:px-20 py-4 text-[18px] lg:text-[26px] font-nexabold text-white shadow-[0_8px_24px_rgba(1,199,5,0.35)] transition-transform hover:scale-[1.015] active:scale-[0.99]"
+            className="inline-flex items-center justify-center rounded-full bg-[rgba(1,199,5,1)]
+                       px-8 md:px-12 lg:px-16 2xl:px-20 py-3 md:py-4
+                       text-[16px] md:text-[20px] lg:text-[26px]
+                       font-nexabold text-white shadow-[0_8px_24px_rgba(1,199,5,0.35)]
+                       transition-transform hover:scale-[1.015] active:scale-[0.99]"
           >
             Become a driver
           </a>

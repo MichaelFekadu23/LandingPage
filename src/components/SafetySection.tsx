@@ -1,13 +1,13 @@
 // src/components/SafetySection.tsx
 
 type Feature = {
-  iconSrc?: string; // replace with your SVG path
+  iconSrc?: string;
   title: string;
   description: string;
 };
 
 type SafetySectionProps = {
-  imageSrc?: string; // replace with your SVG/PNG
+  imageSrc?: string;
   features?: Feature[];
 };
 
@@ -38,33 +38,39 @@ export default function SafetySection({
 }: SafetySectionProps) {
   return (
     <section className="bg-[#F8F8F8]">
-      <div className="mx-auto max-w-8xl px-6 py-16 lg:px-12">
-        {/* Grid layout with text left, image right */}
-        <div className="grid items-center gap-40 md:grid-cols-2">
+      <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-12">
+        {/* Grid layout: 1-col mobile, 2-col md+ */}
+        <div className="grid items-center gap-10 sm:gap-14 lg:gap-24 xl:gap-40 md:grid-cols-2">
           {/* Left: Text & Features */}
-          <div className="space-y-8">
-            <h2 className="font-nexabold text-3xl md:text-[36px] leading-[130%] text-[rgba(26,26,26,0.9)]">
+          <div className="space-y-6 sm:space-y-7 md:space-y-8">
+            <h2 className="font-nexabold leading-[130%] text-[rgba(26,26,26,0.9)]
+                           text-2xl sm:text-3xl xl:text-[36px]">
               Let’s talk about{" "}
               <span className="text-[rgba(1,199,5,1)]">SAFETY</span>
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-7 md:space-y-8">
               {features.map((f, i) => (
-                <div key={i} className="flex gap-4 items-center">
-                  {/* Icon */}
-                  <div>
-                      <img
-                        src={f.iconSrc}
-                        alt={f.title}
-                      />
+                <div key={i} className="flex items-center gap-4 sm:gap-5">
+                  {/* Icon (responsive size only) */}
+                  <div className="shrink-0">
+                    <img
+                      src={f.iconSrc}
+                      alt={f.title}
+                      // className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-11 lg:w-11"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
 
-                  {/* Text */}
+                  {/* Text (font sizes only; style/color unchanged) */}
                   <div>
-                    <h3 className="text-[20px] md:text-[24px] font-nexabold text-[rgba(26,26,26,0.9)]">
+                    <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
+                                   text-[18px] sm:text-[20px] md:text-[24px]">
                       {f.title}
                     </h3>
-                    <p className="mt-2 text-[16px] font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]">
+                    <p className="mt-2 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
+                                  text-[15px] sm:text-[16px] md:text-[16px]">
                       {f.description}
                     </p>
                   </div>
@@ -73,14 +79,15 @@ export default function SafetySection({
             </div>
           </div>
 
-          {/* Right: Image */}
-          <div className="flex justify-end md:justify-center">
-            <div>
-              <img
-                src={imageSrc}
-                alt="Smiling driver"
-              />
-            </div>
+          {/* Right: Image (responsive sizing only) */}
+          <div className="flex justify-center md:justify-center">
+            <img
+              src={imageSrc}
+              alt="Smiling driver"
+              className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>

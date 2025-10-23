@@ -16,19 +16,19 @@ const PlaceholderIcon = () => (
 export const StepItem: React.FC<Step> = ({ labelTop, labelBottom, iconSrc, iconNode }) => {
   return (
     <div className={`relative flex shrink-0 flex-col items-center text-center ${labelBottom ? 'mb-0' : 'mb-7'}`}>
-      <div className="grid place-items-center rounded-[55px] bg-[#01C705] p-[1.5rem]">
+      <div className="grid place-items-center rounded-[55px] bg-[#01C705] p-[1rem] md:p-[1.2rem] xl:p-[1.5rem]">
         <span className="">
           {iconNode ? iconNode : iconSrc ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={iconSrc} alt="" className="" />
+            <img src={iconSrc} alt="" className="h-8 w-8 md:h-10 md:w-10 xl:h-auto xl:w-auto" />
           ) : (
             <PlaceholderIcon />
           )}
         </span>
       </div>
       <div className="mt-3 font-normal text-[rgba(26,26,26,0.85)]">
-        <div className="font-nexa text-[20px]">{labelTop}</div>
-        {labelBottom && <div className="font-nexa text-[20px]">{labelBottom}</div>}
+        <div className="font-nexa text-[16px] md:text-[18px] xl:text-[20px]">{labelTop}</div>
+        {labelBottom && <div className="font-nexa text-[16px] md:text-[18px] xl:text-[20px]">{labelBottom}</div>}
       </div>
     </div>
   );
