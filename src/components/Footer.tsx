@@ -53,31 +53,13 @@ export default function Footer({
             </span>
             <div className="flex items-center gap-2 sm:gap-3">
               <a href="#fb" className="grid h-7 w-7 place-items-center rounded hover:bg-[#01C705]/10 sm:h-8 sm:w-8" aria-label="Facebook">
-                <img
-                  src={fbIconSrc}
-                  alt=""
-                  className="h-4 w-4 sm:h-5 sm:w-5"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={fbIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a href="#tw" className="grid h-7 w-7 place-items-center rounded hover:bg-[#01C705]/10 sm:h-8 sm:w-8" aria-label="Twitter">
-                <img
-                  src={twIconSrc}
-                  alt=""
-                  className="h-4 w-4 sm:h-5 sm:w-5"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={twIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a href="#in" className="grid h-7 w-7 place-items-center rounded hover:bg-[#01C705]/10 sm:h-8 sm:w-8" aria-label="LinkedIn">
-                <img
-                  src={inIconSrc}
-                  alt=""
-                  className="h-4 w-4 sm:h-5 sm:w-5"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={inIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
             </div>
           </div>
@@ -91,37 +73,19 @@ export default function Footer({
           {/* Contact items */}
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8 md:justify-start md:gap-x-10">
             <div className="flex items-center gap-2">
-              <img
-                src={emailIconSrc}
-                alt=""
-                className="h-4 w-4 sm:h-5 sm:w-5"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src={emailIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               <a href="mailto:hello@motoride.com" className="hover:text-[#01C705]">
                 hello@motoride.com
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <img
-                src={phoneIconSrc}
-                alt=""
-                className="h-4 w-4 sm:h-5 sm:w-5"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src={phoneIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               <a href="tel:+441111111111" className="hover:text-[#01C705]">
                 +44 11111 11 1111
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <img
-                src={pinIconSrc}
-                alt=""
-                className="h-4 w-4 sm:h-5 sm:w-5"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src={pinIconSrc} alt="" className="h-4 w-4 sm:h-5 sm:w-5" />
               <span>Somewhere in the World</span>
             </div>
           </div>

@@ -55,9 +55,7 @@ export default function HowMotoWorks({
           {items.map(({ title, description, imgSrc }, i) => (
             <div key={i} className="text-center">
               <div className="mx-auto mb-4 flex flex-col gap-2 rounded-xl w-16 h-16 bg-[#F7F7F7] items-center justify-center shadow-md">
-                {imgSrc ? (
-                  <img src={imgSrc} alt="Step Icon" loading="lazy" decoding="async" />
-                ) : null}
+                {imgSrc ? <img src={imgSrc} alt="Step Icon" /> : null}
               </div>
 
               {/* font sizes only changed below */}

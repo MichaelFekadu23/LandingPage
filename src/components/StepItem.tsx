@@ -20,13 +20,7 @@ export const StepItem: React.FC<Step> = ({ labelTop, labelBottom, iconSrc, iconN
         <span className="">
           {iconNode ? iconNode : iconSrc ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={iconSrc}
-              alt=""
-              className="h-8 w-8 md:h-10 md:w-10 xl:h-auto xl:w-auto"
-              loading="lazy"
-              decoding="async"
-            />
+            <img src={iconSrc} alt="" className="h-8 w-8 md:h-10 md:w-10 xl:h-auto xl:w-auto" />
           ) : (
             <PlaceholderIcon />
           )}

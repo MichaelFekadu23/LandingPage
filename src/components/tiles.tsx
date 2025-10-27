@@ -34,13 +34,7 @@ export default function Tiles() {
           clipPath: "polygon(31.4% 0%, 100% 0%, 68.6% 100%, 0% 100%)",
         }}
       >
-        <img
-          src={src}
-          alt={alt}
-          className="h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src={src} alt={alt} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[6.7px]" />
       </div>
 
