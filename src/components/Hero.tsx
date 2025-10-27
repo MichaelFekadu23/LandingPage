@@ -5,6 +5,7 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); // ← NEW
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -28,7 +29,6 @@ export default function Hero() {
     );
 
     observer.observe(node);
-
     return () => observer.disconnect();
   }, []);
 
@@ -37,21 +37,31 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
+    const onPlaying = () => setIsPlaying(true);   // ← show text only once the video begins
+    const onEnded = () => setIsPlaying(false);    // optional: hide again if it ends/loops before play fires
+    const onPause = () => {/* keep as-is; we only care about first play */}
+
+    video.addEventListener("playing", onPlaying);
+    video.addEventListener("ended", onEnded);
+    video.addEventListener("pause", onPause);
+
     const tryPlay = () => {
       video.play().catch(() => {
-        /* autoplay may be blocked; user interaction will trigger playback */
+        // autoplay may be blocked; user interaction will trigger playback
       });
     };
 
     if (video.readyState >= 2) {
       tryPlay();
-      return;
+    } else {
+      video.addEventListener("canplay", tryPlay, { once: true });
+      video.load();
     }
 
-    video.addEventListener("canplay", tryPlay, { once: true });
-    video.load();
-
     return () => {
+      video.removeEventListener("playing", onPlaying);
+      video.removeEventListener("ended", onEnded);
+      video.removeEventListener("pause", onPause);
       video.removeEventListener("canplay", tryPlay);
     };
   }, [shouldLoadVideo]);
@@ -60,7 +70,6 @@ export default function Hero() {
     <section ref={sectionRef} className="relative w-full overflow-hidden bg-[#F8F8F8]">
       {/* Media layer */}
       <div className="absolute inset-0">
-        {/* Background video */}
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
@@ -84,14 +93,17 @@ export default function Hero() {
         />
       </div>
 
-      {/* Text overlay */}
+      {/* Text overlay (hidden until video is playing) */}
       <div
-        className="
-          relative mx-auto flex w-full items-center
+        className={`
+          relative z-10 mx-auto flex w-full items-center
           min-h-[55svh] sm:min-h-[60svh] xl:min-h-[75svh]
           px-4 sm:px-6 xl:px-24 2xl:px-36
           pt-[8vh] md:pt-[0vh] 2xl:pt-[12vh]
-        "
+          transition-opacity duration-300
+          ${isPlaying ? "opacity-100" : "opacity-0 pointer-events-none select-none"}
+        `}
+        aria-hidden={!isPlaying}
       >
         <div className="mx-auto max-w-[32rem] text-center md:mx-0 md:text-left">
           <h1 className="text-white text-[30px] sm:text-[36px] xl:text-[58px] font-nexabold leading-tight drop-shadow-md">
