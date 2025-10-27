@@ -6,7 +6,7 @@ export const PhoneMock: React.FC<{ src?: string; node?: React.ReactNode }> = ({ 
         <div className="w-full">{node}</div>
       ) : src ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="Moto phone mock"/>
+        <img src={src} alt="Moto phone mock" loading="lazy" decoding="async" />
       ) : (
         // Simple placeholder block until the real SVG is provided
         <div className="aspect-[9/19] w-full rounded-[2.2rem] border border-dashed border-emerald/40 grid place-items-center text-sm text-black/50">
