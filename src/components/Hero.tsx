@@ -2,99 +2,80 @@ import { useEffect, useRef, useState } from "react";
 import GetTheAppButton from "./GetTheAppButton";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [overlaySrc, setOverlaySrc] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
+    if (typeof window === "undefined") return;
+    const node = sectionRef.current;
+    if (!node) return;
 
-    let cancelled = false;
+    if (!("IntersectionObserver" in window)) {
+      setShouldLoadVideo(true);
+      return;
+    }
 
-    const captureFirstFrame = async () => {
-      // Wait until we have dimensions and can draw a frame
-      if (v.readyState < 2) {
-        await new Promise<void>((res) =>
-          v.addEventListener("loadeddata", () => res(), { once: true })
-        );
-      }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
 
-      // Seek to time 0 to ensure a deterministic first frame (Safari reliability)
-      try {
-        v.currentTime = 0;
-        await new Promise<void>((res) =>
-          v.addEventListener("seeked", () => res(), { once: true })
-        );
-      } catch {
-        /* ignore seek errors and try to draw anyway */
-      }
+    observer.observe(node);
 
-      if (cancelled || !v.videoWidth || !v.videoHeight) return;
-
-      const canvas = document.createElement("canvas");
-      canvas.width = v.videoWidth;
-      canvas.height = v.videoHeight;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-
-      try {
-        ctx.drawImage(v, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL("image/jpeg");
-        if (!cancelled) setOverlaySrc(dataUrl);
-      } catch {
-        // If the canvas is tainted (cross-origin), we just skip the overlay
-      }
-    };
-
-    captureFirstFrame().then(async () => {
-      // Try to autoplay
-      try {
-        await v.play();
-      } catch {
-        // Autoplay blocked. Keep overlay visible until user interacts.
-        // You can add a custom play button overlay that calls v.play()
-      }
-    });
-
-    const onPlaying = () => setIsPlaying(true);
-    v.addEventListener("playing", onPlaying);
-
-    return () => {
-      cancelled = true;
-      v.removeEventListener("playing", onPlaying);
-    };
+    return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!shouldLoadVideo) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        /* autoplay may be blocked; user interaction will trigger playback */
+      });
+    };
+
+    if (video.readyState >= 2) {
+      tryPlay();
+      return;
+    }
+
+    video.addEventListener("canplay", tryPlay, { once: true });
+    video.load();
+
+    return () => {
+      video.removeEventListener("canplay", tryPlay);
+    };
+  }, [shouldLoadVideo]);
+
   return (
-    <section className="relative w-full overflow-hidden bg-[#F8F8F8]">
+    <section ref={sectionRef} className="relative w-full overflow-hidden bg-[#F8F8F8]">
       {/* Media layer */}
       <div className="absolute inset-0">
-        {/* First-frame overlay (sits above video until it starts) */}
-        {overlaySrc && (
-          <img
-            src={overlaySrc}
-            alt="Video preview"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 pointer-events-none ${
-              isPlaying ? "opacity-0" : "opacity-100"
-            }`}
-            style={{ zIndex: 2 }}
-          />
-        )}
-
         {/* Background video */}
         <video
           ref={videoRef}
           className="h-full w-full object-cover"
-          src="/assets/videos/Moto-video-1.mp4"
           autoPlay
           loop
           muted
           playsInline
-          preload="auto"
-          // keep the video below the overlay
+          preload={shouldLoadVideo ? "metadata" : "none"}
+          poster="/assets/hero.svg"
           style={{ zIndex: 1 }}
-        />
+        >
+          {shouldLoadVideo ? (
+            <source src="/assets/videos/Moto-video-1.mp4" type="video/mp4" />
+          ) : null}
+        </video>
 
         {/* gradient overlay for text readability (above video, below text) */}
         <div
