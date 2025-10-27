@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'FreightSansPro';
-  src: url('/assets/FreightSansProSemibold-Regular.woff2') format('woff2');
-  font-weight: 600;
+  src: url('/assets/FreightSansProSemibold-Regular.woff2') format('woff2'),
+       url('/assets/FreightSansProSemibold-Regular.woff') format('woff');
+  font-weight: 600; /* semibold */
   font-style: normal;
   font-display: swap;
 }
@@ -14,6 +15,7 @@
   font-display: swap;
 }
 
+/* Poppins 600 (SemiBold) */
 @font-face {
   font-family: 'Poppins';
   src: url('/assets/Poppins-SemiBold.ttf') format('truetype');
@@ -24,22 +26,26 @@
 
 @font-face {
   font-family: 'NexaTrial';
-  src: url('/assets/Nexa-Trial-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  src: url('/assets/Nexa-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Nexa';
-  src: url('/assets/Nexa-Trial-Black.woff') format('woff');
-  font-weight: 700;
+  font-family:  'Inter';
+  src: url('/assets/Inter-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
+/* add inter regular font */
 @font-face {
   font-family: 'Inter';
+  src: url('/assets/Inter-Regular.woff') format('woff');
+}
+
+/* add inter font for 400 weight */
+@font-face {
+  font-family: 'NormalInter';
   src: url('/assets/Inter-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
@@ -47,9 +53,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/assets/Inter-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'Nexa';
+  src: url('/assets/Nexa-Bold.ttf') format('truetype');
+
 }
