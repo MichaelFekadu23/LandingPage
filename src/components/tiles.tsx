@@ -1,28 +1,24 @@
 export default function Tiles() {
   const cards = [
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/26f6b3fa318e41d408f088f2f92094231c618d18?width=374",
+      image: "/assets/tiles/tile1.png",
       number: "8",
-      alt: "Luxury sedan car",
+      alt: "Digit eight rendered on a green parallelogram tile",
     },
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/095c34247f31caf2e71d38c4766c1c0009991d21?width=374",
+      image: "/assets/tiles/tile2.png",
       number: "7",
-      alt: "Carbon fiber texture car",
+      alt: "Digit seven rendered on a dark parallelogram tile",
     },
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/e7127e33fcf51e86ef84b1b278e9588df8ef1622?width=374",
+      image: "/assets/tiles/tile3.png",
       number: "7",
-      alt: "Dark luxury car",
+      alt: "Digit seven rendered on a gold parallelogram tile",
     },
     {
-      image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/71352fa59b77a8e573ed373446bd693df3471237?width=374",
+      image: "/assets/tiles/tile4.png",
       number: "8",
-      alt: "Green luxury car",
+      alt: "Digit eight rendered on a silver parallelogram tile",
     },
   ];
 
@@ -34,7 +30,14 @@ export default function Tiles() {
           clipPath: "polygon(31.4% 0%, 100% 0%, 68.6% 100%, 0% 100%)",
         }}
       >
-        <img src={src} alt={alt} className="h-full w-full object-cover" />
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+          sizes="(min-width: 768px) 187px, 45vw"
+        />
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[6.7px]" />
       </div>
 

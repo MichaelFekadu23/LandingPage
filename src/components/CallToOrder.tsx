@@ -1,7 +1,7 @@
 // src/components/CallToOrder.tsx
 import React from "react";
 
-function ParallelogramTile({ src }: { src: string }) {
+function ParallelogramTile({ src, alt }: { src: string; alt: string }) {
   return (
     <div
       className="
@@ -11,7 +11,14 @@ function ParallelogramTile({ src }: { src: string }) {
         flex justify-center items-center
       "
     >
-      <img src={src} className="h-[70%] w-[70%] md:h-full md:w-full object-cover" alt="" />
+      <img
+        src={src}
+        className="h-[70%] w-[70%] md:h-full md:w-full object-cover"
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        sizes="(min-width: 1024px) 186px, 40vw"
+      />
     </div>
   );
 }
@@ -43,7 +50,10 @@ export default function CallToOrder() {
                 <img
                   src={phoneBadgeSrc}
                   alt="Phone"
-                  // className="h-10 w-10 sm:h-12 sm:w-12 md:h-12 md:w-12 lg:"
+                  loading="lazy"
+                  decoding="async"
+                  width={48}
+                  height={48}
                 />
             </div>
 
@@ -88,7 +98,11 @@ export default function CallToOrder() {
           <div className="w-full">
             <div className="flex mt-2 md:mt-8 xl:mt-auto -space-x-11 justify-center md:justify-start md:-space-x-4 xl:-space-x-12">
               {tiles.map((t, i) => (
-                <ParallelogramTile key={i} src={t.src} />
+                <ParallelogramTile
+                  key={i}
+                  src={t.src}
+                  alt={`Digit ${t.digit} stylized on a Moto tile`}
+                />
               ))}
             </div>
           </div>

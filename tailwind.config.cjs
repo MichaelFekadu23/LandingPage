@@ -18,7 +18,7 @@ module.exports = {
         nexa: ['NexaTrial', 'sans-serif'],
         nexabold: ['Nexa', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        normalInter: ['NormalInter']
+        normalInter: ['Inter', 'sans-serif']
       },
 
       boxShadow: {
