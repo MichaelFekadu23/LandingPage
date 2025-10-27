@@ -84,7 +84,7 @@ export default function SafetySection({
             <img
               src={imageSrc}
               alt="Smiling driver"
-              className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
+              // className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
               loading="lazy"
               decoding="async"
             />

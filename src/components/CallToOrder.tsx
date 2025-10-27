@@ -82,7 +82,7 @@ export default function CallToOrder() {
           {/* Right tiles (overlap for md+, grid for mobile) */}
           <div className="w-full">
             {/* Mobile: simple 2-col grid */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:hidden">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:hidden mt-8">
               {tiles.map((t, i) => (
                 <ParallelogramTile key={i} src={t.src} />
               ))}

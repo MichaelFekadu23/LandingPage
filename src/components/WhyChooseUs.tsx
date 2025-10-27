@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
   return (
     <section className="relative bg-[#F8F8F8]">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-10">
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-center justify-center gap-10 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
           {/* Left: photo (image size scales only) */}
           <div className="w-full">
             <img
