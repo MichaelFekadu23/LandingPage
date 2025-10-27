@@ -109,7 +109,7 @@ export default function Hero() {
           relative mx-auto flex w-full items-center
           min-h-[55svh] sm:min-h-[60svh] xl:min-h-[75svh]
           px-4 sm:px-6 xl:px-24 2xl:px-36
-          pt-[8vh] md:pt-[0vh] xl:pt-[15vh] 2xl:pt-[12vh]
+          pt-[8vh] md:pt-[0vh] 2xl:pt-[12vh]
         "
       >
         <div className="mx-auto max-w-[32rem] text-center md:mx-0 md:text-left">
