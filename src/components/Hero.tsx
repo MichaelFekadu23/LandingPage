@@ -91,7 +91,7 @@ export default function Hero() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           // keep the video below the overlay
           style={{ zIndex: 1 }}
         />

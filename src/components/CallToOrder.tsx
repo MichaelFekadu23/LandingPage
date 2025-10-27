@@ -11,7 +11,13 @@ function ParallelogramTile({ src }: { src: string }) {
         flex justify-center items-center
       "
     >
-      <img src={src} className="h-[70%] w-[70%] md:h-full md:w-full object-cover" alt="" />
+      <img
+        src={src}
+        className="h-[70%] w-[70%] md:h-full md:w-full object-cover"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   );
 }
@@ -43,6 +49,8 @@ export default function CallToOrder() {
                 <img
                   src={phoneBadgeSrc}
                   alt="Phone"
+                  loading="lazy"
+                  decoding="async"
                   // className="h-10 w-10 sm:h-12 sm:w-12 md:h-12 md:w-12 lg:"
                 />
             </div>
