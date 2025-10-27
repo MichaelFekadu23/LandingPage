@@ -41,8 +41,6 @@ export default function HowCard({
             src="/assets/how-moto-works.svg"
             alt=""
             className="object-cover w-[75%] h-[85%] md:w-auto md:h-auto rounded-[20px] md:rounded-none"
-            loading="lazy"
-            decoding="async"
           />
         </div>
       </div>

@@ -5,8 +5,6 @@ export default function LanguageBadge() {
         alt="Amharic flag placeholder"
         src="/assets/eth.svg"
         className="h-5 w-5 rounded-full object-cover"
-        loading="lazy"
-        decoding="async"
       />
       <span>Am</span>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m7 10 5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
