@@ -5,7 +5,7 @@ export default function CityAppSection() {
   return (
     <section
       className="
-        relative flex items-center justify-center overflow-hidden bg-white
+        relative flex items-center justify-center overflow-hidden bg-white dark:bg-charcoal-900
         h-[420px] sm:h-[500px] md:h-[600px] lg:h-[680px]
       "
     >
@@ -20,11 +20,13 @@ export default function CityAppSection() {
       />
 
       {/* overlay content */}
-      <div className="relative z-[1] flex flex-col items-center justify-center px-4 text-center">
+      <div className="absolute inset-0 bg-white/80 dark:bg-black/60" aria-hidden="true" />
+
+      <div className="relative z-[1] flex flex-col items-center justify-center px-4 text-center text-[#121417] dark:text-white">
         <p
           className="
             max-w-[62ch] 2xl:max-w-[40ch] mb-5 font-nexa leading-[140%] text-[rgba(26,26,26,0.9)]
-            text-[18px] sm:text-[22px] md:text-[28px] lg:text-[36px]
+            text-[18px] sm:text-[22px] md:text-[28px] lg:text-[36px] dark:text-white
           "
         >
           <span className="text-[rgba(1,199,5,1)]">Moto</span> offers the

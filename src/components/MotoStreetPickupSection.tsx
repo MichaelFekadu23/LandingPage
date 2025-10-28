@@ -9,7 +9,7 @@ interface Props {
 const Connector: React.FC = () => (
   <div
     className="mb-14 w-24 lg:w-[109px] h-[2px]"
-    style={{ background: 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)' }}
+    style={{ background: 'var(--divider-horizontal-bg)' }}
   />
 );
 
@@ -26,7 +26,7 @@ const defaultSteps: Step[] = [
 const VerticalConnector: React.FC<{ className?: string }> = ({ className }) => (
   <div
     className={["w-[2px] h-full", className].filter(Boolean).join(" ")}
-    style={{ background: 'linear-gradient(180deg, #F8F8F8 0%, #01C705 100%)' }}
+    style={{ background: 'var(--divider-vertical-bg)' }}
   />
 );
 
@@ -34,7 +34,7 @@ const VerticalConnector: React.FC<{ className?: string }> = ({ className }) => (
 const MobileConnector: React.FC = () => (
   <div
     className="h-[2px] w-20"
-    style={{ background: 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)' }}
+    style={{ background: 'var(--divider-horizontal-bg)' }}
   />
 );
 
@@ -80,14 +80,14 @@ export const MotoStreetPickupSection: React.FC<
   Props & { phoneSvgSrc?: string; phoneSvgNode?: React.ReactNode }
 > = ({ steps = defaultSteps, phoneSvgSrc, phoneSvgNode }) => {
   return (
-    <section className="relative w-full max-w-8xl py-14 md:py-20">
+    <section className="relative w-full max-w-8xl py-14 md:py-20 text-[#121417] dark:text-white">
       <div className="grid items-center gap-10 md:grid-cols-[3fr,1fr] lg:gap-16">
         {/* Left: tagline, title, steps */}
         <div>
           <p className="text-lg md:text-xl xl:text-2xl text-[#01C705] font-nexa font-semibold">
             <span className="mr-2 font-sans">//</span>No App. No Problem. Just Scan and Go.
           </p>
-          <h2 className="mt-3 text-[20px] md:text-[22px] xl:text-[24px] font-nexabold text-[rgba(26,26,26,0.92)]">
+          <h2 className="mt-3 text-[20px] md:text-[22px] xl:text-[24px] font-nexabold text-[rgba(26,26,26,0.92)] dark:text-white">
             Moto Street Pickup
           </h2>
 
@@ -114,7 +114,7 @@ export const MotoStreetPickupSection: React.FC<
       {/* light background underline to match screenshot spacing (unchanged) */}
       <div
         className="h-[40px] w-[283px] absolute bottom-7 md:bottom-12 right-10"
-        style={{ background: '#FFF', filter: 'blur(10px)' }}
+        style={{ background: 'var(--connector-highlight-bg)', filter: 'blur(10px)' }}
       />
     </section>
   );

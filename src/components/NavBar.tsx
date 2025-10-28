@@ -26,21 +26,30 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[rgba(10,10,10,1)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full bg-white/80 text-[#121417] backdrop-blur-xl dark:bg-[rgba(10,10,10,1)] dark:text-white">
       <div className="mx-auto flex h-16 sm:h-20 w-full max-w-[1450px] items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <div className="flex shrink-0">
-          <img src="/assets/logo-new.svg" alt="Moto" />
+          <img
+            src="/assets/logo-new.svg"
+            alt="Moto"
+            className="block dark:hidden"
+          />
+          <img
+            src="/assets/logo-footer.svg"
+            alt="Moto"
+            className="hidden dark:block"
+          />
         </div>
 
         {/* Nav (desktop) */}
-        <nav className="hidden md:flex items-center gap-8 text-base font-nexa text-white">
+        <nav className="hidden md:flex items-center gap-8 text-base font-nexa text-[#121417] dark:text-white">
           <a className="hover:text-[#01C705]" href="#">Rider</a>
           <a className="hover:text-[#01C705]" href="#">Driver</a>
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <LanguageBadge />
-            <button className="rounded-md p-1.5 hover:bg-white/5" aria-label="menu">
+            <button className="rounded-md p-1.5 hover:bg-black/5 dark:hover:bg-white/5" aria-label="menu">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
@@ -49,9 +58,9 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile actions */}
-        <div className="relative md:hidden text-white">
+        <div className="relative md:hidden text-[#121417] dark:text-white">
           <button
-            className="rounded-md p-2 hover:bg-white/5"
+            className="rounded-md p-2 hover:bg-black/5 dark:hover:bg-white/5"
             aria-label="menu"
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -65,7 +74,7 @@ export default function Navbar() {
           {/* Overlay */}
           {open && (
             <div
-              className="fixed inset-0 z-40 bg-black/40"
+              className="fixed inset-0 z-40 bg-black/20 dark:bg-black/40"
               // clicking overlay also closes
               onClick={() => setOpen(false)}
             />
@@ -76,8 +85,8 @@ export default function Navbar() {
             id="mobile-menu"
             ref={panelRef}
             className={[
-              "absolute right-0 top-12 z-50 w-56 origin-top-right rounded-2xl border border-white/10",
-              "bg-[rgba(20,20,20,0.95)] backdrop-blur-md shadow-xl",
+              "absolute right-0 top-12 z-50 w-56 origin-top-right rounded-2xl border border-black/10 dark:border-white/10",
+              "bg-white/95 text-[#121417] backdrop-blur-md shadow-xl dark:bg-[rgba(20,20,20,0.95)] dark:text-white",
               "transition-all duration-150",
               open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0",
             ].join(" ")}
@@ -88,7 +97,7 @@ export default function Navbar() {
               <a
                 href="#"
                 role="menuitem"
-                className="block w-full rounded-lg px-4 py-3 text-sm font-nexa text-white hover:bg-white/5"
+                className="block w-full rounded-lg px-4 py-3 text-sm font-nexa hover:bg-black/5 dark:hover:bg-white/5"
                 onClick={() => setOpen(false)}
               >
                 Rider
@@ -96,13 +105,13 @@ export default function Navbar() {
               <a
                 href="#"
                 role="menuitem"
-                className="mt-1 block w-full rounded-lg px-4 py-3 text-sm font-nexa text-white hover:bg-white/5"
+                className="mt-1 block w-full rounded-lg px-4 py-3 text-sm font-nexa hover:bg-black/5 dark:hover:bg-white/5"
                 onClick={() => setOpen(false)}
               >
                 Driver
               </a>
 
-              <div className="my-2 h-px bg-white/10" />
+              <div className="my-2 h-px bg-black/10 dark:bg-white/10" />
 
               {/* Language choice */}
               <div className="px-3 pb-2 pt-1">

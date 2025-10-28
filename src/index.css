@@ -2,3 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --divider-horizontal-bg: linear-gradient(90deg, #ffffff 0%, #01c705 100%);
+  --divider-vertical-bg: linear-gradient(180deg, rgba(248, 248, 248, 1) 0%, #01c705 100%);
+  --connector-highlight-bg: rgba(255, 255, 255, 0.8);
+  --timeline-label-bg: linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #ffffff 79.31%);
+  --timeline-marker-bg: linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9eee9f 74.89%);
+  --driver-card-gradient: linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 27.52%, rgba(191, 245, 192, 0.4) 133.14%);
+  --driver-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.dark {
+  color-scheme: dark;
+  --divider-horizontal-bg: linear-gradient(90deg, rgba(15, 17, 21, 1) 0%, #01c705 100%);
+  --divider-vertical-bg: linear-gradient(180deg, rgba(11, 15, 20, 1) 0%, #01c705 100%);
+  --connector-highlight-bg: rgba(26, 212, 142, 0.16);
+  --timeline-label-bg: linear-gradient(90deg, rgba(18, 36, 28, 0.7) -22.41%, rgba(7, 9, 12, 0.92) 79.31%);
+  --timeline-marker-bg: linear-gradient(90deg, rgba(7, 9, 12, 0.95) 0%, rgba(1, 199, 5, 0.4) 74.89%);
+  --driver-card-gradient: linear-gradient(135deg, rgba(1, 199, 5, 0.16) 0%, rgba(1, 199, 5, 0.04) 100%);
+  --driver-card-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}

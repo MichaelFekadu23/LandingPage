@@ -1,6 +1,6 @@
 export default function LanguageBadge() {
   return (
-    <div className="flex items-center gap-2 rounded-full bg-white/5 px-2 py-1 text-xs">
+    <div className="flex items-center gap-2 rounded-full bg-black/5 px-2 py-1 text-xs text-[#121417] dark:bg-white/5 dark:text-white">
       <img
         alt="Amharic flag placeholder"
         src="/assets/eth.svg"
