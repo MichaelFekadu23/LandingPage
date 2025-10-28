@@ -21,34 +21,41 @@ export default function Footer({
   inIconSrc = "/assets/icons/in.svg",
 }: FooterProps) {
   return (
-    <footer className="bg-white text-[rgba(26,26,26,0.9)]">
+    <footer className="bg-white text-[rgba(26,26,26,0.9)] dark:bg-charcoal-900 dark:text-white">
       <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6">
         {/* Top rule */}
-        <hr className="border-1 border-[rgba(224,224,224,1)]" />
+        <hr className="border-1 border-[rgba(224,224,224,1)] dark:border-white/10" />
 
         {/* Row: logo, nav, social */}
         <div className="flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-9">
           {/* Logo */}
           <div className="flex items-center justify-center gap-3 md:justify-start">
             <img
+              src="/assets/logo-new.svg"
+              alt="MOTO"
+              className="h-7 w-auto sm:h-8 md:h-9 dark:hidden"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
               src={logoSrc}
               alt="MOTO"
-              className="h-7 w-auto sm:h-8 md:h-9"
+              className="hidden h-7 w-auto sm:h-8 md:h-9 dark:block"
               loading="lazy"
               decoding="async"
             />
           </div>
 
           {/* Nav links */}
-          <nav className="font-poppins flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[14px] sm:text-[15px] md:text-[16px] text-[rgba(10,10,10,1)]">
+          <nav className="font-poppins flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[14px] sm:text-[15px] md:text-[16px] text-[rgba(10,10,10,1)] dark:text-white">
             <a href="#become-a-driver" className="hover:text-[#01C705]">Become a driver</a>
             <a href="#services" className="hover:text-[#01C705]">Services</a>
             <a href="#why-choose-us" className="hover:text-[#01C705]">Why choose us</a>
           </nav>
 
           {/* Social pill */}
-          <div className="mx-auto flex items-center gap-3 rounded-xl border border-[rgba(224,224,224,1)] px-3 py-2 sm:px-4 sm:py-3 md:mx-0">
-            <span className="px-2 font-poppins text-[14px] sm:text-[15px] md:text-[16px] text-[rgba(10,10,10,1)]">
+          <div className="mx-auto flex items-center gap-3 rounded-xl border border-[rgba(224,224,224,1)] px-3 py-2 sm:px-4 sm:py-3 md:mx-0 dark:border-white/10">
+            <span className="px-2 font-poppins text-[14px] sm:text-[15px] md:text-[16px] text-[rgba(10,10,10,1)] dark:text-white">
               Stay Connected
             </span>
             <div className="flex items-center gap-2 sm:gap-3">
@@ -66,7 +73,7 @@ export default function Footer({
         </div>
 
         {/* Divider */}
-        <hr className="border-1 border-[rgba(224,224,224,1)]" />
+        <hr className="border-1 border-[rgba(224,224,224,1)] dark:border-white/10" />
 
         {/* Bottom row: contact + copyright */}
         <div className="flex flex-col gap-5 py-8 font-poppins text-[14px] sm:text-[15px] md:flex-row md:items-center md:justify-between md:py-10 md:text-[16px]">
@@ -91,7 +98,7 @@ export default function Footer({
           </div>
 
           {/* Copyright */}
-          <span className="text-[12px] sm:text-[13px] md:text-[14px] font-poppins text-[rgba(152,152,154,1)] text-center md:text-left">
+          <span className="text-[12px] sm:text-[13px] md:text-[14px] font-poppins text-[rgba(152,152,154,1)] text-center md:text-left dark:text-white/60">
             © {new Date().getFullYear()} MOTO. All rights reserved.
           </span>
         </div>

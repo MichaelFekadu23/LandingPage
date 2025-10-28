@@ -45,11 +45,11 @@ const cards: Card[] = [
 
 export default function DriverValueThirty() {
   return (
-    <section className="bg-white">
+    <section className="bg-white text-[#121417] dark:bg-charcoal-900 dark:text-white">
       <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 md:py-16 lg:px-8">
         {/* Heading */}
         <h2 className="mx-auto max-w-4xl font-nexabold text-center leading-tight text-[rgba(26,26,26,0.9)]
-                       text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">
+                       text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] dark:text-white">
           Here’s what driving with{" "}
           <span className="text-[rgba(1,199,5,1)]">Moto</span> puts in
           <br className="hidden sm:block" />
@@ -60,33 +60,30 @@ export default function DriverValueThirty() {
         {/* Timeline */}
         <div className="relative mx-auto mt-8 w-full max-w-8xl">
           {/* Labels aligned to the 3 markers via grid */}
-          <div className="mb-3 grid grid-cols-3 items-center text-[rgba(26,26,26,0.9)]">
+          <div className="mb-3 grid grid-cols-3 items-center text-[rgba(26,26,26,0.9)] dark:text-white">
             <span
-              className="justify-self-start rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+              className="justify-self-start rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1 dark:border-white/40
                          text-[12px] sm:text-[14px] md:text-[16px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+                background: 'var(--timeline-label-bg)',
               }}
             >
               Today
             </span>
             <span
-              className="justify-self-center rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+              className="justify-self-center rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1 dark:border-white/40
                          text-[12px] sm:text-[14px] md:text-[16px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+                background: 'var(--timeline-label-bg)',
               }}
             >
               15 Days
             </span>
             <span
-              className="justify-self-end rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
+              className="justify-self-end rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1 dark:border-white/40
                          text-[12px] sm:text-[14px] md:text-[16px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
+                background: 'var(--timeline-label-bg)',
               }}
             >
               30 Days
@@ -102,24 +99,21 @@ export default function DriverValueThirty() {
               className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]
                          h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+                background: 'var(--timeline-marker-bg)',
               }}
             />
             <div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)]
                          h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+                background: 'var(--timeline-marker-bg)',
               }}
             />
             <div
               className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(1,199,5,1)] shadow
                          h-4 w-4 sm:h-[22px] sm:w-[22px] md:h-[25px] md:w-[25px]"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 0%, #9EEE9F 74.89%)",
+                background: 'var(--timeline-marker-bg)',
               }}
             />
           </div>
@@ -131,24 +125,23 @@ export default function DriverValueThirty() {
             <article
               key={i}
               className="w-full rounded-2xl border border-[#01C705]/40 bg-gradient-to-tr from-[#01C705]/5 to-transparent
-                         p-5 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.03)]"
+                         p-5 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.03)] dark:border-[#01C705]/50"
               style={{
                 boxSizing: "border-box",
-                background:
-                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 27.52%, rgba(191, 245, 192, 0.4) 133.14%)",
+                background: 'var(--driver-card-gradient)',
+                boxShadow: 'var(--driver-card-shadow)',
               }}
             >
               <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
-                             text-[18px] sm:text-[20px] md:text-[20px] lg:text-[20px]">
+                             text-[18px] sm:text-[20px] md:text-[20px] lg:text-[20px] dark:text-white">
                 {c.title}
               </h3>
 
-              <ul className="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
+              <ul className="mt-4 sm:mt-5 space-y-3 sm:space-y-4 text-[rgba(26,26,26,0.65)] dark:text-white/70">
                 {c.points.map((p, j) => (
                   <li
                     key={j}
-                    className="flex gap-3 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
-                               text-[14px] sm:text-[15px] md:text-[16px]"
+                    className="flex gap-3 font-nexa leading-relaxed text-[14px] sm:text-[15px] md:text-[16px]"
                   >
                     <svg
                       viewBox="0 0 24 24"

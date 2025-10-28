@@ -57,7 +57,10 @@ export default function Hero() {
   }, [shouldLoadVideo]);
 
   return (
-    <section ref={sectionRef} className="relative w-full overflow-hidden bg-[#F8F8F8]">
+    <section
+      ref={sectionRef}
+      className="relative w-full overflow-hidden bg-[#F8F8F8] text-[#121417] dark:bg-charcoal-900 dark:text-white"
+    >
       {/* Media layer */}
       <div className="absolute inset-0">
         {/* Background video */}
@@ -79,7 +82,7 @@ export default function Hero() {
 
         {/* gradient overlay for text readability (above video, below text) */}
         <div
-          className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.22),rgba(0,0,0,0.22))]"
+          className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.12),rgba(0,0,0,0.12))] dark:bg-[linear-gradient(0deg,rgba(0,0,0,0.32),rgba(0,0,0,0.32))]"
           style={{ zIndex: 1 }}
         />
       </div>
@@ -94,11 +97,11 @@ export default function Hero() {
         "
       >
         <div className="mx-auto max-w-[32rem] text-center md:mx-0 md:text-left">
-          <h1 className="text-white text-[30px] sm:text-[36px] xl:text-[58px] font-nexabold leading-tight drop-shadow-md">
+          <h1 className="text-[30px] sm:text-[36px] xl:text-[58px] font-nexabold leading-tight drop-shadow-md text-[#121417] dark:text-white">
             Ride for Less
           </h1>
 
-          <p className="mt-3 font-nexa text-white/70 text-[16px] sm:text-[18px] xl:text-[24px] leading-[150%] drop-shadow-sm md:max-w-[378px] mx-auto md:mx-0">
+          <p className="mt-3 font-nexa text-[rgba(26,26,26,0.75)] text-[16px] sm:text-[18px] xl:text-[24px] leading-[150%] drop-shadow-sm md:max-w-[378px] mx-auto md:mx-0 dark:text-white/70">
             Ride instantly, negotiate fares, or let Moto’s smart bidding find your best deal
           </p>
 

@@ -32,7 +32,7 @@ export const StepItem: React.FC<Step> = ({ labelTop, labelBottom, iconSrc, iconN
           )}
         </span>
       </div>
-      <div className="mt-3 font-normal text-[rgba(26,26,26,0.85)]">
+      <div className="mt-3 font-normal text-[rgba(26,26,26,0.85)] dark:text-white">
         <div className="font-nexa text-[16px] md:text-[18px] xl:text-[20px]">{labelTop}</div>
         {labelBottom && <div className="font-nexa text-[16px] md:text-[18px] xl:text-[20px]">{labelBottom}</div>}
       </div>

@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative bg-[#F8F8F8]">
+    <section className="relative bg-[#F8F8F8] dark:bg-charcoal-900">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-10">
         <div className="grid grid-cols-1 items-center 2xl:items-start justify-center gap-10 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
           {/* Left: photo (image size scales only) */}
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
                 className="
                   rounded-[40px] border border-[rgba(0,0,0,0.80)] px-8 py-4
                   text-sm sm:text-base md:text-lg lg:text-xl
-                  font-nexabold text-black
+                  font-nexabold text-black dark:border-white/40 dark:text-white
                 "
               >
                 WHY CHOOSE US
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                   <div className="pt-1">
                     <div
                       className="
-                        rounded-lg bg-white shadow-sm
+                        rounded-lg bg-white shadow-sm dark:bg-charcoal-800 dark:shadow-[0_20px_45px_rgba(0,0,0,0.45)]
                         flex items-center justify-center
                         h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-16 lg:w-16
                       "
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
                     <h3
                       className="
                         font-nexa text-[rgba(26,26,26,0.9)]
-                        text-lg sm:text-xl md:text-2xl lg:text-2xl
+                        text-lg sm:text-xl md:text-2xl lg:text-2xl dark:text-white
                       "
                     >
                       {f.title}
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
                     <p
                       className="
                         mt-3 max-w-[62ch] font-nexa leading-[150%] text-[rgba(26,26,26,0.65)]
-                        text-sm sm:text-[15px] md:text-base lg:text-base
+                        text-sm sm:text-[15px] md:text-base lg:text-base dark:text-white/70
                       "
                     >
                       {f.description}

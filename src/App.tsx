@@ -16,33 +16,32 @@ import { MotoStreetPickupSection } from "./components/MotoStreetPickupSection";
 
 export default function App() {
   return (
-    <main className="min-h-screen w-full bg-[#0F1115] text-white antialiased overflow-x-hidden">
+    <main className="min-h-screen w-full bg-white text-[#121417] antialiased overflow-x-hidden dark:bg-[#0F1115] dark:text-white">
       <Navbar />
       <Hero />
       <GradientBridge />
-      <section className="relative w-full bg-[#F8F8F8] text-[#121417]">      
+      <section className="relative w-full bg-[#F8F8F8] text-[#121417] dark:bg-charcoal-900 dark:text-white">
         <HeadlineWrapper />
         <div className="mx-auto w-full max-w-[1400px] px-5 mt-10">
           <div className="flex justify-center">
             <button
-              className="rounded-[40px] text-[rgba(26,26,26,0.90)] font-nexa text-[16px] md:text-[18px] xl:text-[20px] px-6 md:px-9 py-3 md:py-4 font-bold"
-              style={{ border: "1px solid rgba(0, 0, 0, 0.80)" }}
+              className="rounded-[40px] font-nexa text-[16px] md:text-[18px] xl:text-[20px] px-6 md:px-9 py-3 md:py-4 font-bold text-[rgba(26,26,26,0.90)] border border-[rgba(0,0,0,0.80)] dark:text-white dark:border-white/40"
             >
               HOW MOTO WORKS
             </button>
           </div>
 
           <HowItWorks />
-          <MotoStreetPickupSection phoneSvgSrc="/assets/phone-content.svg"/>
+          <MotoStreetPickupSection phoneSvgSrc="/assets/phone-content.svg" />
         </div>
       </section>
-        <HowMotoWorks />
-        <WhyChooseUs />
-        <CallToOrder />
-        <SafetySection />
-        <DriverValueThirty />
-        <CityAppSection />
-        <Footer />
+      <HowMotoWorks />
+      <WhyChooseUs />
+      <CallToOrder />
+      <SafetySection />
+      <DriverValueThirty />
+      <CityAppSection />
+      <Footer />
     </main>
   );
 }

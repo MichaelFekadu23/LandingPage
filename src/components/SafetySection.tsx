@@ -37,14 +37,14 @@ export default function SafetySection({
   features = defaultFeatures,
 }: SafetySectionProps) {
   return (
-    <section className="bg-[#F8F8F8]">
+    <section className="bg-[#F8F8F8] dark:bg-charcoal-900">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-12">
         {/* Grid layout: 1-col mobile, 2-col md+ */}
         <div className="grid items-center gap-10 sm:gap-14 lg:gap-24 xl:gap-40 md:grid-cols-2">
           {/* Left: Text & Features */}
-          <div className="space-y-6 sm:space-y-7 md:space-y-8">
+          <div className="space-y-6 sm:space-y-7 md:space-y-8 text-[#121417] dark:text-white">
             <h2 className="font-nexabold leading-[130%] text-[rgba(26,26,26,0.9)]
-                           text-2xl sm:text-3xl xl:text-[36px]">
+                           text-2xl sm:text-3xl xl:text-[36px] dark:text-white">
               Let’s talk about{" "}
               <span className="text-[rgba(1,199,5,1)]">SAFETY</span>
             </h2>
@@ -66,11 +66,11 @@ export default function SafetySection({
                   {/* Text (font sizes only; style/color unchanged) */}
                   <div>
                     <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
-                                   text-[18px] sm:text-[20px] md:text-[24px]">
+                                   text-[18px] sm:text-[20px] md:text-[24px] dark:text-white">
                       {f.title}
                     </h3>
                     <p className="mt-2 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
-                                  text-[15px] sm:text-[16px] md:text-[16px]">
+                                  text-[15px] sm:text-[16px] md:text-[16px] dark:text-white/70">
                       {f.description}
                     </p>
                   </div>
