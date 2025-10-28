@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import LanguageBadge from "./LanguageBadge";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,10 +34,11 @@ export default function Navbar() {
         </div>
 
         {/* Nav (desktop) */}
-        <nav className="hidden md:flex items-center gap-10 text-base font-nexa text-white">
+        <nav className="hidden md:flex items-center gap-8 text-base font-nexa text-white">
           <a className="hover:text-[#01C705]" href="#">Rider</a>
           <a className="hover:text-[#01C705]" href="#">Driver</a>
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <LanguageBadge />
             <button className="rounded-md p-1.5 hover:bg-white/5" aria-label="menu">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -104,10 +106,9 @@ export default function Navbar() {
 
               {/* Language choice */}
               <div className="px-3 pb-2 pt-1">
-                <span className="block px-1 pb-2 text-[12px] uppercase tracking-wide text-white/60">
-                  Language
-                </span>
+
                 <div className="flex items-center gap-3">
+                  <ThemeToggle />
                   <LanguageBadge />
                   {/* Optional: a simple text fallback or another language switch */}
                   {/* <button className="rounded-md bg-white/5 px-3 py-1.5 text-sm hover:bg-white/10">EN</button> */}

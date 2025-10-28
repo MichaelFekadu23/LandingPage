@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+
+  // Enable dark mode via a class on the root (supports either `html.dark` or `[data-theme="dark"]`)
+  darkMode: ['class', '[data-theme="dark"]'],
+
   theme: {
     extend: {
       colors: {
@@ -18,9 +22,8 @@ module.exports = {
         nexa: ['NexaTrial', 'sans-serif'],
         nexabold: ['Nexa', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        normalInter: ['NormalInter']
+        normalInter: ['NormalInter'],
       },
-
       boxShadow: {
         glow: '0 20px 80px rgba(26, 212, 142, 0.3)',
         card: '0 30px 60px rgba(7, 10, 16, 0.45)',
