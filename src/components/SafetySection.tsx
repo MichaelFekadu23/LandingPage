@@ -55,12 +55,13 @@ export default function SafetySection({
                 <div key={i} className="flex items-center gap-4 sm:gap-5">
                   {/* Icon (responsive size only) */}
                   <div className="shrink-0 bg-white dark:bg-[rgba(35,35,35,1)] rounded-lg shadow-sm w-16 h-16 flex items-center justify-center">
-                    <img
-                      src={f.iconSrc}
-                      alt={f.title}
-                      // className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-11 lg:w-11"
-                      loading="lazy"
-                      decoding="async"
+                    <object
+                      data={f.iconSrc}
+                      type="image/svg+xml"
+                      aria-label={f.title}
+                      className="
+                        lg:h-auto lg:w-auto sm:h-8 sm:w-8 md:h-9 md:w-9
+                      "
                     />
                   </div>
 
@@ -85,10 +86,9 @@ export default function SafetySection({
           {/* Right: Image (responsive sizing only) */}
           <div className="flex justify-center md:justify-center">
             <object
-              type="image/svg+xml"
               data={imageSrc}
               aria-label="Smiling driver"
-              // className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
+              className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
             />
           </div>
         </div>
