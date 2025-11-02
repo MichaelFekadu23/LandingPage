@@ -60,8 +60,6 @@ export default function HowMotoWorks({
                     type="image/svg+xml"
                     data={imgSrc}
                     aria-label="Step icon"
-                    width={48}
-                    height={48}
                   />
                 ) : null}
               </div>
