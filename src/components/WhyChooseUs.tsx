@@ -36,9 +36,9 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 items-center 2xl:items-start justify-center gap-10 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
           {/* Left: photo (image size scales only) */}
           <div className="w-full">
-            <img
-              src={photoSrc}
-              alt="Moto vehicle"
+            <object
+              data={photoSrc}
+              aria-label="Moto vehicle"
               className="
                 mx-auto block h-auto object-contain
                 w-full max-w-[520px]
@@ -47,8 +47,6 @@ export default function WhyChooseUs() {
                 lg:max-w-auto
                 xl:w-auto
               "
-              loading="lazy"
-              decoding="async"
             />
           </div>
 
