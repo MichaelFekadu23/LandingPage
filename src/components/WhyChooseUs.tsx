@@ -82,9 +82,6 @@ export default function WhyChooseUs() {
                         data={f.iconSrc}
                         aria-label={f.title}
                         type="image/svg+xml"
-                        className="
-                          lg:h-auto lg:w-auto sm:h-8 sm:w-8 md:h-9 md:w-9
-                        "
                       />
                     </div>
                   </div>
