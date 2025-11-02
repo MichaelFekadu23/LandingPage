@@ -83,16 +83,41 @@ export default function SafetySection({
             </div>
           </div>
 
-          {/* Right: Image (responsive sizing only) */}
-          <div className="flex justify-center md:justify-center">
-            <object
-              data={imageSrc}
-              aria-label="Smiling driver"
-              className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
-            />
+          <div className="w-full flex justify-center md:justify-end">
+      <div
+        className="
+          w-full
+          max-w-[min(680px,92vw)]
+          md:max-w-[min(560px,46vw)]
+          lg:max-w-[min(750px,42vw)]
+        "
+      >
+        {/* Rounded clip wrapper */}
+        <div className="rounded-[24px] overflow-hidden">
+          {/* Auto height on mobile; aspect + height cap only on md+ */}
+          <div
+            className="
+              relative
+              h-auto
+              md:aspect-[16/11]
+              lg:aspect-[16/9]
+              md:max-h-[520px]
+              xl:max-h-[560px]
+            "
+          >
+              <object
+                data={imageSrc}
+                type="image/svg+xml"
+                aria-label="Smiling driver"
+                className="block w-full h-auto md:absolute md:inset-0 md:h-full"
+              />
+           
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+  </div>
+</section>
   );
 }

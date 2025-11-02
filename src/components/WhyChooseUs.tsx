@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
               data={photoSrc}
               aria-label="Moto vehicle"
               className="
-                mx-auto block h-auto object-contain
+                mx-auto block max-h-[520px] object-contain
                 w-full max-w-[520px]
                 sm:max-w-[620px]
                 md:max-w-[700px]
