@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative bg-[#F8F8F8]">
+    <section className="relative bg-[#F8F8F8] dark:bg-[rgba(10,10,10,1)]">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-10">
         <div className="grid grid-cols-1 items-center 2xl:items-start justify-center gap-10 md:grid-cols-[2fr_3fr] md:gap-12 lg:gap-16">
           {/* Left: photo (image size scales only) */}
@@ -57,9 +57,9 @@ export default function WhyChooseUs() {
             <div className="mb-10 flex justify-center md:mb-16 md:justify-start">
               <span
                 className="
-                  rounded-[40px] border border-[rgba(0,0,0,0.80)] px-8 py-4
+                  rounded-[40px] border border-[rgba(0,0,0,0.80)] dark:border-[rgba(255,255,255,0.8)] px-8 py-4
                   text-sm sm:text-base md:text-lg lg:text-xl
-                  font-nexabold text-black
+                  font-nexabold text-black dark:text-white
                 "
               >
                 WHY CHOOSE US
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                   <div className="pt-1">
                     <div
                       className="
-                        rounded-lg bg-white shadow-sm
+                        rounded-lg bg-white dark:bg-[rgba(35,35,35,1)] shadow-sm
                         flex items-center justify-center
                         h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-16 lg:w-16
                       "
@@ -95,6 +95,7 @@ export default function WhyChooseUs() {
                     <h3
                       className="
                         font-nexa text-[rgba(26,26,26,0.9)]
+                        dark:text-white
                         text-lg sm:text-xl md:text-2xl lg:text-2xl
                       "
                     >
@@ -103,6 +104,7 @@ export default function WhyChooseUs() {
                     <p
                       className="
                         mt-3 max-w-[62ch] font-nexa leading-[150%] text-[rgba(26,26,26,0.65)]
+                        dark:text-[rgba(255,255,255,0.5)]
                         text-sm sm:text-[15px] md:text-base lg:text-base
                       "
                     >

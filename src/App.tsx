@@ -20,13 +20,12 @@ export default function App() {
       <Navbar />
       <Hero />
       <GradientBridge />
-      <section className="relative w-full bg-[#F8F8F8] text-[#121417]">      
+      <section className="relative w-full bg-[#F8F8F8] dark:bg-[rgba(10,10,10,1)] text-[#121417]">      
         <HeadlineWrapper />
         <div className="mx-auto w-full max-w-[1400px] px-5 mt-10">
           <div className="flex justify-center">
             <button
-              className="rounded-[40px] text-[rgba(26,26,26,0.90)] font-nexa text-[16px] md:text-[18px] xl:text-[20px] px-6 md:px-9 py-3 md:py-4 font-bold"
-              style={{ border: "1px solid rgba(0, 0, 0, 0.80)" }}
+              className="rounded-[40px] border border-[rgba(0,0,0,0.80)] dark:border-[rgba(255,255,255,0.80)] text-[rgba(26,26,26,0.90)] dark:text-white font-nexa text-[16px] md:text-[18px] xl:text-[20px] px-6 md:px-9 py-3 md:py-4 font-bold"
             >
               HOW MOTO WORKS
             </button>

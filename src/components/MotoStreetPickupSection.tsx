@@ -1,17 +1,22 @@
 import React from 'react';
 import { PhoneMock } from './PhoneMock';
 import { Step, StepItem } from './StepItem';
+import { useTheme } from '../context/ThemeContext';
 
 interface Props {
   steps?: Step[];
 }
 
-const Connector: React.FC = () => (
-  <div
-    className="mb-14 w-24 lg:w-[109px] h-[2px]"
-    style={{ background: 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)' }}
-  />
-);
+const Connector: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+  return (
+    <div
+      className="mb-14 w-24 lg:w-[109px] h-[2px]"
+      style={{ background: `${isDark ? 'linear-gradient(90deg, #0A0A0A 0%, #01C705 100%)' : 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)'}` }}
+    />
+  );
+};
 
 
 
@@ -23,20 +28,28 @@ const defaultSteps: Step[] = [
 ];
 
 // 1) Connector fills its grid row height
-const VerticalConnector: React.FC<{ className?: string }> = ({ className }) => (
-  <div
-    className={["w-[2px] h-full", className].filter(Boolean).join(" ")}
-    style={{ background: 'linear-gradient(180deg, #F8F8F8 0%, #01C705 100%)' }}
-  />
-);
+const VerticalConnector: React.FC<{ className?: string }> = ({ className }) => {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+  return (
+    <div
+      className={["w-[2px] h-full", className].filter(Boolean).join(" ")}
+      style={{ background: `${isDark ? 'linear-gradient(180deg, #0A0A0A 0%, #01C705 100%)' : 'linear-gradient(180deg, #F8F8F8 0%, #01C705 100%)'}` }}
+    />
+  );
+};
 
 // (optional) narrower mobile horizontal connector
-const MobileConnector: React.FC = () => (
-  <div
-    className="h-[2px] w-20"
-    style={{ background: 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)' }}
-  />
-);
+const MobileConnector: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+  return (
+    <div
+      className="h-[2px] w-20"
+      style={{ background: `${isDark ? 'linear-gradient(90deg, #0A0A0A 0%, #01C705 100%)' : 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)'}` }}
+    />
+  );
+}
 
 function MobileSteps({ steps }: { steps: Step[] }) {
   const [s0, s1, s2, s3] = steps;
@@ -82,39 +95,38 @@ export const MotoStreetPickupSection: React.FC<
   return (
     <section className="relative w-full max-w-8xl py-14 md:py-20">
       <div className="grid items-center gap-10 md:grid-cols-[3fr,1fr] lg:gap-16">
-        {/* Left: tagline, title, steps */}
-        <div>
-          <p className="text-lg md:text-xl xl:text-2xl text-[#01C705] font-nexa font-semibold">
-            <span className="mr-2 font-sans">//</span>No App. No Problem. Just Scan and Go.
-          </p>
-          <h2 className="mt-3 text-[20px] md:text-[22px] xl:text-[24px] font-nexabold text-[rgba(26,26,26,0.92)]">
-            Moto Street Pickup
-          </h2>
+      {/* Left: tagline, title, steps */}
+      <div>
+        <p className="text-lg md:text-xl xl:text-2xl text-[#01C705] font-nexa font-semibold">
+        <span className="mr-2 font-sans">//</span>No App. No Problem. Just Scan and Go.
+        </p>
+        <h2 className="mt-3 text-[24px] md:text-[30px] xl:text-[40px] font-nexabold text-[rgba(26,26,26,0.92)] dark:text-white">
+        Moto Street Pickup
+        </h2>
 
-          {/* Mobile design (only < md) */}
-          <MobileSteps steps={steps} />
+        {/* Mobile design (only < md) */}
+        <MobileSteps steps={steps} />
 
-          {/* Existing row design for md and up (unchanged) */}
-          <div className="hidden md:flex md:mt-14 items-center gap-6 md:gap-4 lg:gap-6">
-            {steps.map((s, i) => (
-              <React.Fragment key={i}>
-                <StepItem {...s} />
-                {i < steps.length - 1 && <Connector />}
-              </React.Fragment>
-            ))}
-          </div>
+        {/* Existing row design for md and up (unchanged) */}
+        <div className="hidden md:flex md:mt-14 items-center gap-6 md:gap-4 lg:gap-6">
+        {steps.map((s, i) => (
+          <React.Fragment key={i}>
+          <StepItem {...s} />
+          {i < steps.length - 1 && <Connector />}
+          </React.Fragment>
+        ))}
         </div>
+      </div>
 
-        {/* Right: phone mock (unchanged) */}
-        <div className="md:justify-self-end md:ml-auto ml-10">
-          <PhoneMock src={phoneSvgSrc} node={phoneSvgNode} />
-        </div>
+      {/* Right: phone mock (unchanged) */}
+      <div className="md:justify-self-end md:ml-auto ml-10">
+        <PhoneMock src={phoneSvgSrc} node={phoneSvgNode} />
+      </div>
       </div>
 
       {/* light background underline to match screenshot spacing (unchanged) */}
       <div
-        className="h-[40px] w-[283px] absolute bottom-7 md:bottom-12 right-10"
-        style={{ background: '#FFF', filter: 'blur(10px)' }}
+      className="h-[40px] w-[283px] absolute bottom-7 md:bottom-12 right-10 bg-white dark:bg-black blur-[10px]"
       />
     </section>
   );

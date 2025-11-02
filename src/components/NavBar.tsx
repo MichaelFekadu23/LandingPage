@@ -37,8 +37,8 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8 text-base font-nexa text-white">
           <a className="hover:text-[#01C705]" href="#">Rider</a>
           <a className="hover:text-[#01C705]" href="#">Driver</a>
+          <ThemeToggle />
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             <LanguageBadge />
             <button className="rounded-md p-1.5 hover:bg-white/5" aria-label="menu">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">

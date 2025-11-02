@@ -37,13 +37,14 @@ export default function SafetySection({
   features = defaultFeatures,
 }: SafetySectionProps) {
   return (
-    <section className="bg-[#F8F8F8]">
+    <section className="bg-[#F8F8F8] dark:bg-[rgba(10,10,10,1)]">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-12">
         {/* Grid layout: 1-col mobile, 2-col md+ */}
         <div className="grid items-center gap-10 sm:gap-14 lg:gap-24 xl:gap-40 md:grid-cols-2">
           {/* Left: Text & Features */}
           <div className="space-y-6 sm:space-y-7 md:space-y-8">
             <h2 className="font-nexabold leading-[130%] text-[rgba(26,26,26,0.9)]
+                           dark:text-white
                            text-2xl sm:text-3xl xl:text-[36px]">
               Let’s talk about{" "}
               <span className="text-[rgba(1,199,5,1)]">SAFETY</span>
@@ -53,7 +54,7 @@ export default function SafetySection({
               {features.map((f, i) => (
                 <div key={i} className="flex items-center gap-4 sm:gap-5">
                   {/* Icon (responsive size only) */}
-                  <div className="shrink-0">
+                  <div className="shrink-0 bg-white dark:bg-[rgba(35,35,35,1)] rounded-lg shadow-sm w-16 h-16 flex items-center justify-center">
                     <img
                       src={f.iconSrc}
                       alt={f.title}
@@ -66,10 +67,12 @@ export default function SafetySection({
                   {/* Text (font sizes only; style/color unchanged) */}
                   <div>
                     <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
+                                  dark:text-white
                                    text-[18px] sm:text-[20px] md:text-[24px]">
                       {f.title}
                     </h3>
                     <p className="mt-2 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
+                                  dark:text-[rgba(255,255,255,0.5)]
                                   text-[15px] sm:text-[16px] md:text-[16px]">
                       {f.description}
                     </p>

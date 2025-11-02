@@ -1,7 +1,9 @@
 // src/components/CallToOrder.tsx
 import React from "react";
+import { useTheme } from "../context/ThemeContext";
 
 function ParallelogramTile({ src, alt }: { src: string; alt: string }) {
+  
   return (
     <div
       className="
@@ -26,16 +28,18 @@ function ParallelogramTile({ src, alt }: { src: string; alt: string }) {
 
 export default function CallToOrder() {
   const phoneBadgeSrc = "/assets/phone-badge.svg";
+    const { theme, toggleTheme } = useTheme();
+    const isDark = theme === "dark";
 
   const tiles = [
-    { src: "/assets/tiles/tile1.png", digit: "8" },
-    { src: "/assets/tiles/tile2.png", digit: "7" },
-    { src: "/assets/tiles/tile3.png", digit: "7" },
-    { src: "/assets/tiles/tile4.png", digit: "8" },
+    { src: isDark ? "/assets/tiles/tile-8-black.png" : "/assets/tiles/tile1.png", digit: "8" },
+    { src: isDark ? "/assets/tiles/tile-7-black.png" : "/assets/tiles/tile2.png", digit: "7" },
+    { src: isDark ? "/assets/tiles/tile-7b-black.png" : "/assets/tiles/tile3.png", digit: "7" },
+    { src: isDark ? "/assets/tiles/tile-8b-black.png" : "/assets/tiles/tile4.png", digit: "8" },
   ];
 
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-black">
       <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
         {/* Mobile/tablet: stack; Desktop: 3-area grid */}
         <div className="grid items-center 2xl:gap-8 xl:grid-cols-[1fr_auto_1fr]">
@@ -63,12 +67,12 @@ export default function CallToOrder() {
                 Low on Data? Don't Stress.
 
               </div>
-              <div className="xl:mt-3">Order your ride with just a quick call.</div>
+              <div>Order your ride with just a quick call.</div>
             </div>
           </div>
 
           <div className="mt-3 sm:mt-4">
-            <p className="font-nexa text-[rgba(26,26,26,0.65)] leading-[150%]
+            <p className="font-nexa text-[rgba(26,26,26,0.65)] dark:text-white leading-[150%]
                           text-base sm:text-base md:text-2xl">
               Even offline, Moto keeps you connected and moving. Simply call
               our dispatch line,{" "}
@@ -84,14 +88,12 @@ export default function CallToOrder() {
           <div className="relative hidden h-[1px] w-full items-center xl:flex">
             <div
               className="h-[2px] w-[163.064px]"
-              style={{
-                background: "linear-gradient(90deg, #FFF 0%, #01C705 100%)",
-              }}
+              style={{ background: `${isDark ? 'linear-gradient(90deg, #0A0A0A 0%, #01C705 100%)' : 'linear-gradient(90deg, #F8F8F8 0%, #01C705 100%)'}` }}
             />
           </div>
           <div
             className="w-[2px] h-[40px] lg:h-[60px] mx-auto mt-2 flex xl:hidden"
-            style={{ background: 'linear-gradient(180deg, #F8F8F8 0%, #01C705 100%)' }}
+            style={{ background: `${isDark ? 'linear-gradient(180deg, #0A0A0A 0%, #01C705 100%)' : 'linear-gradient(180deg, #F8F8F8 0%, #01C705 100%)'}` }}
           />
 
           {/* Right tiles (overlap for md+, grid for mobile) */}

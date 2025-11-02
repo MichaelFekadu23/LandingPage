@@ -15,5 +15,16 @@
   <body class="font-sans bg-charcoal text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- in index.html <head> -->
+    <script>
+    (() => {
+      const saved = localStorage.getItem('theme');
+      const sys = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const t = saved || sys;
+      if (t === 'dark') document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+    </script>
+
   </body>
 </html>

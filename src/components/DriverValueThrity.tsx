@@ -45,11 +45,11 @@ const cards: Card[] = [
 
 export default function DriverValueThirty() {
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-[rgba(18,17,17,1)]">
       <div className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 md:py-16 lg:px-8">
         {/* Heading */}
         <h2 className="mx-auto max-w-4xl font-nexabold text-center leading-tight text-[rgba(26,26,26,0.9)]
-                       text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">
+                       dark:text-white text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">
           Here’s what driving with{" "}
           <span className="text-[rgba(1,199,5,1)]">Moto</span> puts in
           <br className="hidden sm:block" />
@@ -60,38 +60,32 @@ export default function DriverValueThirty() {
         {/* Timeline */}
         <div className="relative mx-auto mt-8 w-full max-w-8xl">
           {/* Labels aligned to the 3 markers via grid */}
-          <div className="mb-3 grid grid-cols-3 items-center text-[rgba(26,26,26,0.9)]">
+            <div className="mb-3 grid grid-cols-3 items-center text-[rgba(26,26,26,0.9)]">
             <span
               className="justify-self-start rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
-                         text-[12px] sm:text-[14px] md:text-[16px]"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
-              }}
+                   text-[12px] sm:text-[14px] md:text-[16px] bg-gradient-to-r from-[#C7C4C4BB] to-white
+                   dark:from-[#EDE5E5BB] dark:to-white
+                   "
             >
               Today
             </span>
             <span
               className="justify-self-center rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
-                         text-[12px] sm:text-[14px] md:text-[16px]"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
-              }}
+                   text-[12px] sm:text-[14px] md:text-[16px] bg-gradient-to-r from-[#C7C4C4BB] to-white
+                   dark:from-[#EDE5E5BB] dark:to-white
+                   "
             >
               15 Days
             </span>
             <span
               className="justify-self-end rounded-full border border-[rgba(187,187,187,1)] px-2.5 py-1
-                         text-[12px] sm:text-[14px] md:text-[16px]"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(199, 196, 196, 0.733333) -22.41%, #FFFFFF 79.31%)",
-              }}
+                   text-[12px] sm:text-[14px] md:text-[16px] bg-gradient-to-r from-[#C7C4C4BB] to-white
+                   dark:from-[#EDE5E5BB] dark:to-white
+                   "
             >
               30 Days
             </span>
-          </div>
+            </div>
 
           {/* Rail */}
           <div className="relative mx-auto mt-4 h-[14px] w-full max-w-[97%]">
@@ -129,16 +123,16 @@ export default function DriverValueThirty() {
         <div className="mt-8 grid gap-5 sm:gap-6 md:mt-10 md:grid-cols-3">
           {cards.map((c, i) => (
             <article
-              key={i}
-              className="w-full rounded-2xl border border-[#01C705]/40 bg-gradient-to-tr from-[#01C705]/5 to-transparent
-                         p-5 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.03)]"
-              style={{
-                boxSizing: "border-box",
-                background:
-                  "linear-gradient(90deg, rgba(248, 248, 248, 0.972549) 27.52%, rgba(191, 245, 192, 0.4) 133.14%)",
-              }}
+              className="
+                w-full relative overflow-hidden
+                rounded-[24px] border border-[#01C705] dark:border-[#5F5F5F]
+                p-5 sm:p-6
+                bg-gradient-to-r from-[rgba(248,248,248,0.972549)] to-[rgba(191,245,192,0.32)]
+                 dark:[background:linear-gradient(90deg,rgba(32,32,32,1)_0%,rgba(217,219,217,0.29)_100%)]
+              "
             >
               <h3 className="font-nexabold text-[rgba(26,26,26,0.9)]
+                            dark:text-white
                              text-[18px] sm:text-[20px] md:text-[20px] lg:text-[20px]">
                 {c.title}
               </h3>
@@ -148,6 +142,7 @@ export default function DriverValueThirty() {
                   <li
                     key={j}
                     className="flex gap-3 font-nexa leading-relaxed text-[rgba(26,26,26,0.65)]
+                              dark:text-[rgba(255,255,255,0.5)]
                                text-[14px] sm:text-[15px] md:text-[16px]"
                   >
                     <svg

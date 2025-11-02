@@ -40,13 +40,13 @@ export default function HowMotoWorks({
   items?: Step[];
 }) {
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-white dark:bg-black">
       <div className="max-w-10xl px-4 py-16 sm:px-6 xl:px-8">
         <div className="flex justify-center">
           {/* font sizes only changed below */}
-          <span className="rounded-[40px] border border-[rgba(10,10,10,0.30)] px-8 py-4
+          <span className="rounded-[40px] border border-[rgba(10,10,10,0.30)] dark:border-[rgba(255,255,255,0.80)] px-8 py-4
                            text-base sm:text-xl md:text-xl xl:text-2xl
-                           font-nexa text-[rgba(26,26,26,0.9)]">
+                           font-nexa text-[rgba(26,26,26,0.9)] dark:text-white">
             How Moto Street Pickup Works
           </span>
         </div>
@@ -54,7 +54,7 @@ export default function HowMotoWorks({
         <div className="mt-12 grid grid-cols-1 gap-x-16 gap-y-14 sm:grid-cols-2">
           {items.map(({ title, description, imgSrc }, i) => (
             <div key={i} className="text-center">
-              <div className="mx-auto mb-4 flex flex-col gap-2 rounded-xl w-16 h-16 bg-[#F7F7F7] items-center justify-center shadow-md">
+              <div className="mx-auto mb-4 flex flex-col gap-2 rounded-xl w-16 h-16 bg-[#F7F7F7] dark:shadow-[0_3px_10px_1px_#01C705] dark:bg-black items-center justify-center shadow-md">
                 {imgSrc ? (
                   <img
                     src={imgSrc}
@@ -68,13 +68,15 @@ export default function HowMotoWorks({
               </div>
 
               {/* font sizes only changed below */}
-              <h3 className="font-nexa leading-[130%] text-[rgba(26,26,26,0.9)]
+              <h3 className="font-nexa leading-[130%] text-[rgba(26,26,26,0.9)] 
+                           dark:text-white
                              text-xl sm:text-xl md:text-[22px] xl:text-2xl">
                 {title}
               </h3>
 
               {/* font sizes only changed below */}
-              <p className="mx-auto mt-4 max-w-[50ch] font-nexa leading-[130%] text-[rgba(26,26,26,0.65)]
+              <p className="mx-auto mt-4 max-w-[50ch] font-nexa leading-[130%] text-[rgba(26,26,26,0.65)] 
+                            dark:text-[rgba(255,255,255,0.5)]
                             text-sm sm:text-[15px] md:text-base xl:text-base">
                 {description}
               </p>

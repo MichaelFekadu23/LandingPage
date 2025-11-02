@@ -6,8 +6,8 @@ export default function Headline() {
           font-poppins font-semibold leading-tight
           text-[28px] sm:text-[36px] md:text-5xl xl:text-6xl
           lg:mt-6 xl:mt-10
+          text-[#333] dark:text-white
         "
-        style={{ color: "var(--black-80, #333)" }}
       >
         Your{" "}
         <span className="relative inline-block text-[#10C63A]">
@@ -57,8 +57,9 @@ export default function Headline() {
           font-poppins font-semibold
           text-[28px] sm:text-[36px] md:text-5xl xl:text-6xl
           mt-1 sm:mt-2
+          text-[#333]
+          dark:text-white
         "
-        style={{ color: "var(--black-80, #333)" }}
       >
         Rideshare Platform
       </h3>
@@ -68,10 +69,11 @@ export default function Headline() {
           font-poppins font-medium leading-relaxed mx-auto
           text-[16px] sm:text-[18px] xl:text-[20px]
           mt-2 max-w-[48ch]
+          text-[#333]
+          dark:text-[rgba(217,217,217,1)]
         "
-        style={{ color: "var(--black-80, #333)" }}
       >
-        Drivers Can Keep <span className="text-[#01C705]">100%</span>, and Riders
+        Drivers Can Keep <span className="text-[#01C705] dark:text-[rgba(203,255,0,0.8)]">100%</span>, and Riders
         Pay Less with Driver Bids.
       </p>
     </div>
