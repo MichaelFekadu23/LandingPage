@@ -25,7 +25,6 @@ export const StepItem: React.FC<Step> = ({ labelTop, labelBottom, iconSrc, iconN
               aria-label="Step icon"
               type="image/svg+xml" 
               className="h-8 w-8 md:h-10 md:w-10 xl:h-auto xl:w-auto"
-
             />
           ) : (
             <PlaceholderIcon />
