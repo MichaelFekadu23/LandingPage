@@ -51,11 +51,10 @@ export default function CallToOrder() {
                 className="mt-1 rounded-lg px-2 py-2 shadow-md sm:mt-2"
                 style={{ boxShadow: "0 3px 10px 1px #01C705" }}
               >
-                <img
-                  src={phoneBadgeSrc}
-                  alt="Phone"
-                  loading="lazy"
-                  decoding="async"
+                <object
+                  data={phoneBadgeSrc}
+                  aria-label="Phone"
+                  type="image/svg+xml"
                   width={48}
                   height={48}
                 />

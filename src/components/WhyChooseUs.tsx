@@ -78,14 +78,13 @@ export default function WhyChooseUs() {
                         h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-16 lg:w-16
                       "
                     >
-                      <img
-                        src={f.iconSrc}
-                        alt={f.title}
+                      <object
+                        data={f.iconSrc}
+                        aria-label={f.title}
+                        type="image/svg+xml"
                         className="
                           lg:h-auto lg:w-auto sm:h-8 sm:w-8 md:h-9 md:w-9
                         "
-                        loading="lazy"
-                        decoding="async"
                       />
                     </div>
                   </div>
