@@ -37,13 +37,14 @@ export default function HowCard({
       {/* IMAGE */}
       <div className="mx-auto w-full">
         <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[20px] bg-[#F7F7F7] dark:bg-black sm:aspect-square sm:rounded-[26px] lg:rounded-[30px]">
-          <img
-            src="/assets/how-moto-works.svg"
-            alt="Illustration showing how Moto works"
-            className="object-cover w-[75%] h-[85%] md:w-auto md:h-auto rounded-[20px] md:rounded-none"
-            loading="lazy"
-            decoding="async"
-          />
+          <object 
+            type="image/svg+xml" 
+            data="/assets/how-moto-works.svg" 
+            aria-label="Illustration showing how Moto works"
+            className="w-[75%] h-[85%] md:w-auto md:h-auto"
+          >
+            {/* Fallback content */}
+          </object>
         </div>
       </div>
 
