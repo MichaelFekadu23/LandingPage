@@ -84,12 +84,11 @@ export default function SafetySection({
 
           {/* Right: Image (responsive sizing only) */}
           <div className="flex justify-center md:justify-center">
-            <img
-              src={imageSrc}
-              alt="Smiling driver"
+            <object
+              type="image/svg+xml"
+              data={imageSrc}
+              aria-label="Smiling driver"
               // className="h-auto w-full max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[720px] object-contain"
-              loading="lazy"
-              decoding="async"
             />
           </div>
         </div>
