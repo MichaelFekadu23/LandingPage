@@ -124,7 +124,7 @@ export default function DriverValueThirty() {
           {cards.map((c, i) => (
             <article
               className="
-                w-full relative overflow-hidden
+                w-full min-h-[296px] relative overflow-hidden
                 rounded-[24px] border border-[#01C705] dark:border-[#5F5F5F]
                 p-5 sm:p-6
                 bg-gradient-to-r from-[rgba(248,248,248,0.972549)] to-[rgba(191,245,192,0.32)]
