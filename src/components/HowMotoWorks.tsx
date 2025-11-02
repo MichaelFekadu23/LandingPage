@@ -56,11 +56,10 @@ export default function HowMotoWorks({
             <div key={i} className="text-center">
               <div className="mx-auto mb-4 flex flex-col gap-2 rounded-xl w-16 h-16 bg-[#F7F7F7] dark:shadow-[0_3px_10px_1px_#01C705] dark:bg-black items-center justify-center shadow-md">
                 {imgSrc ? (
-                  <img
-                    src={imgSrc}
-                    alt="Step icon"
-                    loading="lazy"
-                    decoding="async"
+                  <object
+                    type="image/svg+xml"
+                    data={imgSrc}
+                    aria-label="Step icon"
                     width={48}
                     height={48}
                   />
